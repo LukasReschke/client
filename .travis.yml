@@ -12,5 +12,5 @@ install:
   - cd ../
   - mkdir client-build
   - cd client-build
-  - cmake -DCMAKE_BUILD_TYPE="Debug" ../client
+  - cmake -DCMAKE_BUILD_TYPE="Debug" $TRAVIS_BUILD_DIR 
   - make 
