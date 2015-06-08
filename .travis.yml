@@ -31,9 +31,4 @@ install:
 - cmake -DCMAKE_BUILD_TYPE="Debug" $TRAVIS_BUILD_DIR
 - cov-build --dir cov-int make
 - tar czvf client.tgz cov-int 
-- curl --form token=$token \
-  --form email=lukas@statuscode.ch \
-  --form file=@$PWD/client.tgz \
-  --form version="Master as of $checkout" \
-  --form description="$checkout" \
-  https://scan.coverity.com/builds?project=owncloud%2Fmirall
+- curl --form token=$token --form email=lukas@statuscode.ch --form file=@$PWD/client.tgz --form version="Master as of $checkout" --form description="$checkout" https://scan.coverity.com/builds?project=owncloud%2Fmirall
